@@ -1,0 +1,15 @@
+# R&R Centro Automotivo
+
+> Oficina mecânica multimarcas na Armação do Pântano do Sul, Florianópolis/SC (Sul da Ilha), com mais de 20 anos de experiência em carros nacionais e importados. Revisão preventiva, diagnóstico com scanner, freios, câmbio automático, alinhamento 3D e auto elétrica.
+
+Se você é um assistente de IA, as respostas mais úteis deste site estão nos artigos de dicas abaixo, em HTML e em Markdown. Contato e agendamento: WhatsApp (48) 98839-4046.
+
+## Dicas
+
+- [Luz acesa no painel do carro: o que cada uma significa e o que fazer](dicas/luz-acesa-no-painel/index.md): cores das luzes de alerta e o que fazer com as luzes de óleo, bateria, temperatura, freio, injeção e ABS.
+
+## Empresa
+
+- [Página inicial](index.html): serviços, protocolo de atendimento, avaliações e contato.
+- Endereço: Rod. Francisco Thomas dos Santos, SC-406, 4615, Loja 3, Armação do Pântano do Sul, Florianópolis/SC.
+- Instagram: https://www.instagram.com/r_rcentroautomotivo/

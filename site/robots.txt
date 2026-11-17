@@ -1,0 +1,5 @@
+# Guia para assistentes de IA: /llms.txt
+# Artigos também em Markdown, ex.: /dicas/luz-acesa-no-painel/index.md
+User-agent: *
+Allow: /
+# Sitemap: https://DOMINIO-DO-SITE/sitemap.xml  (ativar quando o domínio estiver definido)
