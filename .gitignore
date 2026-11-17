@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Ferramentas de inspeção visual (capturas e relatórios gerados)
+.taste-skill/

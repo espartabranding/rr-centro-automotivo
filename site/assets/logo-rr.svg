@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" role="img" aria-label="R&amp;R Centro Automotivo">
+  <polygon points="10,8 230,8 120,192" fill="#D71920"/>
+  <g font-family="Montserrat, Arial, sans-serif" fill="#fff" text-anchor="middle"><text x="84" y="114" font-weight="500" font-size="88">R</text><text x="120" y="70" font-weight="500" font-size="30">&amp;</text><text x="156" y="114" font-weight="500" font-size="88">R</text></g>
+  <text x="120" y="138" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="14" fill="#fff" letter-spacing="2.2">CENTRO AUTOMOTIVO</text>
+</svg>
