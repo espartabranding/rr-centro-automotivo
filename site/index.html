@@ -11,10 +11,11 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:image" content="assets/img/jeep-frente.jpg">
-<link rel="icon" href="assets/logo-rr.svg" type="image/svg+xml">
+<link rel="icon" href="assets/logo/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/logo/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/jeep-frente.jpg">
 <link rel="preload" href="assets/fonts/BebasNeue-Bold.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="assets/fonts/BebasNeue-Light.woff" as="font" type="font/woff" crossorigin>
@@ -62,7 +63,7 @@
   --dark-2:#232326;
   --dark-3:#2F2F33;
 
-  --cond:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --cond:"Barlow", Arial, sans-serif;
   --display:"Bebas Neue", "Arial Narrow", sans-serif;
   --sans:"Barlow", Arial, sans-serif;
 
@@ -83,8 +84,7 @@ html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--sub-h) + 8px)}
 body{background:var(--paper);color:var(--text);font-family:var(--sans);font-size:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-button,input,select{font:inherit;color:inherit}
-button{background:none;border:0;cursor:pointer}
+button,button{background:none;border:0;cursor:pointer}
 figure{margin:0}
 ol,ul{list-style:none}
 :focus-visible{outline:3px solid var(--red);outline-offset:3px}
@@ -104,7 +104,7 @@ h1 .th{font-weight:100}
 h1{font-size:var(--h1)}
 h2,.h2{font-size:var(--h2)}
 h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:var(--h3);line-height:.95;color:var(--ink);letter-spacing:.02em}
-.redline{color:var(--red);font-weight:700;font-size:var(--sub);line-height:1.25;margin-top:18px}
+.redline,.c-lede{font-family:var(--sans);font-weight:400;font-size:var(--sub);line-height:1.45;color:inherit;margin-top:22px}
 .copy{margin-top:16px;max-width:46ch}
 .feature .redline{max-width:34ch}
 .label{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:var(--small)}
@@ -112,7 +112,7 @@ h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size
 .dark{color:#C9C9CC}
 
 /* ---------- buttons: red with a darker chip ---------- */
-.btn{display:inline-flex;align-items:stretch;min-height:48px;background:var(--red);color:#fff;font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1rem;transition:background .25s, transform .25s var(--ease)}
+.btn{display:inline-flex;align-items:stretch;min-height:48px;background:var(--red);color:#fff;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:1rem;transition:background .25s, transform .25s var(--ease)}
 .btn span{display:flex;align-items:center;gap:10px;padding:0 20px}
 .btn i{display:flex;align-items:center;justify-content:center;width:44px;background:var(--red-dark);transition:width .3s var(--ease)}
 .btn i::after{content:"";width:8px;height:12px;background:#fff;clip-path:polygon(0 0,100% 50%,0 100%)}
@@ -123,7 +123,7 @@ h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size
 .btn.grey{background:var(--dark-3)}
 .btn.grey i{background:#45454B}
 .btn.grey:hover{background:#3A3A3F}
-.more{display:inline-flex;align-items:center;gap:8px;font-family:var(--cond);font-weight:700;text-transform:uppercase;font-size:.95rem;color:var(--ink);letter-spacing:.03em}
+.more{display:inline-flex;align-items:center;gap:8px;font-family:var(--cond);font-weight:600;text-transform:uppercase;font-size:.95rem;color:var(--ink);letter-spacing:.03em}
 .more::before{content:"»";color:var(--red);font-size:1.1em}
 .more:hover{color:var(--red)}
 .dark .more{color:#fff}
@@ -133,7 +133,8 @@ h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size
 .top .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding-right:0}
 .brand{display:flex;align-items:center;gap:12px}
 .brand svg{width:58px;height:48px}
-.brand b{font-family:var(--cond);font-weight:700;text-transform:uppercase;font-size:1.15rem;letter-spacing:.04em}
+footer .brand img{width:150px;height:auto}
+.brand b{font-family:var(--cond);font-weight:600;text-transform:uppercase;font-size:1.15rem;letter-spacing:.04em}
 .top nav{display:flex;gap:28px;margin-left:auto;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem}
 .top nav a{color:#D5D5D8;transition:color .2s}
 .top nav a:hover{color:#fff}
@@ -151,14 +152,6 @@ h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size
 .hero .redline{font-size:clamp(1.35rem,1rem + 1.1vw,2.1rem);line-height:1.15;margin-top:26px;letter-spacing:-.01em}
 
 /* ---------- offers strip ---------- */
-.offers{background:var(--dark-2);color:#fff}
-.offers .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
-.offer{padding:22px 24px 22px 0;display:flex;flex-direction:column;justify-content:center;gap:4px}
-.offer + .offer{padding-left:24px;box-shadow:inset 1px 0 0 rgba(255,255,255,.08)}
-.offer .label{color:#9C9CA2}
-.offer b{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,1.2rem + 1vw,2.2rem);line-height:1;text-transform:uppercase}
-.offer b small{font-size:.55em;font-weight:600;color:#C9C9CC;margin-left:4px}
-.offer .stars{color:var(--red);letter-spacing:2px;font-size:1rem}
 
 /* ---------- sticky sub-nav with tabs ---------- */
 .subnav{position:sticky;top:0;z-index:40;background:var(--paper);height:var(--sub-h);box-shadow:0 1px 0 var(--silver-2)}
@@ -167,7 +160,7 @@ h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size
 .subnav .brand b{color:var(--ink);font-size:1.05rem}
 .tabs-nav{display:flex;height:100%;overflow-x:auto;scrollbar-width:none}
 .tabs-nav::-webkit-scrollbar{display:none}
-.tabs-nav a{display:flex;align-items:center;padding:0 18px;font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.95rem;color:var(--soft);white-space:nowrap;transition:background .25s, color .25s}
+.tabs-nav a{display:flex;align-items:center;padding:0 18px;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:.95rem;color:var(--soft);white-space:nowrap;transition:background .25s, color .25s}
 .tabs-nav a:hover{color:var(--ink)}
 .tabs-nav a.on{background:var(--red);color:#fff}
 
@@ -204,7 +197,7 @@ h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size
 .contact{position:relative;overflow:hidden}
 .contact .wrap{position:relative;z-index:1}
 .minis{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.minis li{font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem;padding:8px 12px;background:#fff;box-shadow:inset 0 0 0 1px var(--silver-2);color:var(--ink)}
+.minis li{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem;padding:8px 12px;background:#fff;box-shadow:inset 0 0 0 1px var(--silver-2);color:var(--ink)}
 .dark .minis li{background:var(--dark-3);box-shadow:none;color:#fff}
 
 /* section 1: the promise */
@@ -239,7 +232,7 @@ h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size
 .proto.is-live[data-beat="2"] .proto-count span:nth-child(3),
 .proto.is-live[data-beat="3"] .proto-count span:nth-child(4){display:inline}
 
-.urg{font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--c,#E0262D)}
+.urg{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--c,#E0262D)}
 .swap{animation:swap .45s var(--ease)}
 @keyframes swap{from{opacity:0;transform:translateY(10px)}}
 
@@ -267,17 +260,17 @@ h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size
 #oficina .bleed img{position:absolute;inset:0;opacity:0;transform:scale(1.05)}
 #oficina .bleed img.on{opacity:1;transform:none}
 .case-tabs{display:flex;gap:6px;margin-top:24px;flex-wrap:wrap}
-.case-tabs button{font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.95rem;padding:10px 16px;background:var(--dark-3);color:#C9C9CC;transition:background .2s, color .2s}
+.case-tabs button{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:.95rem;padding:10px 16px;background:var(--dark-3);color:#C9C9CC;transition:background .2s, color .2s}
 .case-tabs button:hover{color:#fff}
 .case-tabs button[aria-selected="true"]{background:var(--red);color:#fff}
 .case{margin-top:22px;min-height:180px}
-.case .who{font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--red);font-size:1rem}
+.case .who{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--red);font-size:1rem}
 .case p.desc{margin-top:10px;max-width:46ch}
 
 /* team */
 .facts3{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:28px;margin-top:26px}
 .facts3 b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,1.6rem + 1.6vw,3.2rem);line-height:.9;color:var(--ink)}
-.facts3 span{display:block;margin-top:6px;font-size:.9rem;max-width:16ch}
+.facts3 span{display:block;margin-top:6px;font-size:.98rem;max-width:16ch}
 
 /* proof */
 .proof{background:var(--dark)}
@@ -285,30 +278,26 @@ h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size
 .big-stars{color:var(--red);font-size:2rem;letter-spacing:6px;margin-top:16px}
 .brands{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
 .brands li{background:var(--dark-2);padding:18px 20px;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:1.35rem;color:#fff;letter-spacing:.02em}
-.brands li small{display:block;font-family:var(--sans);text-transform:none;font-weight:400;font-size:.88rem;color:#9C9CA2;letter-spacing:0;margin-top:2px}
+.brands li small{display:block;font-family:var(--sans);text-transform:none;font-weight:400;font-size:.95rem;color:#9C9CA2;letter-spacing:0;margin-top:2px}
 
-/* contact */
-.contact .wrap{padding-block:clamp(72px,8vw,120px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px)}
-form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
-.field{position:relative;display:grid;gap:6px}
-.field.full{grid-column:1 / -1}
-.field label{font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.85rem;color:var(--ink)}
-input,select{height:50px;padding:0 14px;background:#fff;border:1px solid #BDBDC1;border-radius:0;font-size:1rem;color:var(--ink);appearance:none;-webkit-appearance:none}
-input:focus,select:focus{outline:none;border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
-.field.sel::after{content:"";position:absolute;right:16px;bottom:20px;width:8px;height:12px;background:var(--red);clip-path:polygon(0 0,100% 50%,0 100%);transform:rotate(90deg);pointer-events:none}
-form .btn{grid-column:1 / -1;justify-self:start;margin-top:8px}
-.visit{background:var(--dark);color:#C9C9CC;position:relative;overflow:hidden}
-.visit figure{height:220px;clip-path:polygon(0 0,100% 0,100% 82%,0 100%)}
-.visit figure img{width:100%;height:100%;object-fit:cover}
-.visit .in{padding:26px 28px 30px}
-.visit dl{display:grid;gap:16px;margin-top:18px}
-.visit dt{color:#9C9CA2}
-.visit dd{color:#fff;font-weight:500;margin-top:2px}
-.visit dd a:hover{color:#fff;text-decoration:underline}
-.visit .cap{margin-top:16px;font-size:.85rem;color:#9C9CA2}
+/* contact: two quiet columns, no boxes */
+.contact{background:var(--silver)}
+.contact .wrap{padding-block:clamp(80px,9vw,140px);display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:clamp(40px,7vw,120px);align-items:start}
+.c-lede{max-width:30ch}
+.c-info{margin-top:44px;border-top:1px solid #CFCFD2}
+.c-info div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid #CFCFD2}
+.c-info dt{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:1rem;color:var(--soft);padding-top:2px}
+.c-info dd{font-size:1.08rem;line-height:1.45;color:var(--ink);font-weight:500}
+.c-info a{transition:color .2s}
+.c-info a:hover{color:var(--red)}
+.c-map{margin:0}
+.c-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.c-map iframe{display:block;width:100%;aspect-ratio:4/3.4;border:0;background:#E2E2E4}
+.c-map figcaption{margin-top:14px}
+input,select{height:48px;padding:0;background:transparent;border:0;border-bottom:2px solid #BDBDC1;border-radius:0;font-size:1.15rem;color:var(--ink);appearance:none;-webkit-appearance:none;transition:border-color .2s}
 
 /* footer */
-footer{background:#111113;color:#9C9CA2;font-size:.92rem}
+footer{background:#111113;color:#9C9CA2;font-size:.98rem}
 footer .wrap{padding-block:48px 32px;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:start}
 footer nav{display:grid;grid-template-columns:repeat(3,auto);gap:10px 48px;justify-content:center}
 footer nav a{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#D5D5D8}
@@ -321,7 +310,7 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
 /* ---------- floating WhatsApp ---------- */
 .wa-float{position:fixed;right:clamp(14px,2.4vw,28px);bottom:clamp(14px,2.4vw,28px);z-index:60;display:flex;align-items:center;gap:0;height:60px;border-radius:30px;background:#25D366;color:#fff;box-shadow:0 10px 28px -8px rgba(0,0,0,.45);transition:transform .3s var(--ease), box-shadow .3s;animation:waIn .7s 1.4s var(--ease) both}
 .wa-float svg{width:32px;height:32px;margin:0 14px}
-.wa-float b{max-width:0;overflow:hidden;white-space:nowrap;font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1rem;transition:max-width .45s var(--ease), padding .45s var(--ease)}
+.wa-float b{max-width:0;overflow:hidden;white-space:nowrap;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:1rem;transition:max-width .45s var(--ease), padding .45s var(--ease)}
 .wa-float:hover{transform:translateY(-2px);box-shadow:0 14px 34px -8px rgba(0,0,0,.5)}
 .wa-float:hover b{max-width:220px;padding-right:22px}
 .wa-float::before{content:"";position:absolute;inset:0;border-radius:inherit;background:#25D366;z-index:-1;animation:waPulse 2.6s 2.4s ease-out infinite}
@@ -336,13 +325,13 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
 .hero{background:#F4F4F4}
 .perks::before,.perks::after{display:none}
 .wa-float::before{display:none}
-.kicker{font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.9rem;color:var(--red);margin-bottom:18px}
+.kicker{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:1rem;color:var(--red);margin-bottom:18px}
 .subnav{box-shadow:0 1px 0 rgba(0,0,0,.06)}
 .subnav .brand b{color:var(--ink)}
 .subnav .wrap{gap:28px}
 .tabs-nav{margin-left:auto}
 .tabs-nav a{padding:0 14px}
-.bar-cta{align-self:stretch;display:flex;align-items:center;padding:0 26px;background:var(--red);color:#fff;font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:1rem;transition:background .2s}
+.bar-cta{align-self:stretch;display:flex;align-items:center;padding:0 26px;background:var(--red);color:#fff;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:1rem;transition:background .2s}
 .bar-cta:hover{background:#E0222A}
 .subnav .wrap{padding-right:0}
 .feature{min-height:clamp(540px,46vw,700px)}
@@ -362,32 +351,34 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
 
 
 /* ---------- menu bar ---------- */
-:root{--sub-h:84px}
-.mbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);transition:box-shadow .35s var(--ease)}
+:root{--sub-h:108px}
+.mbar{position:sticky;top:0;z-index:50;background:rgba(21,21,23,.97);transition:box-shadow .35s var(--ease)}
 .mbar::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--red);transform:scaleX(var(--progress,0));transform-origin:left}
 .mbar.scrolled{box-shadow:0 10px 30px -18px rgba(0,0,0,.45)}
-.mbar-in{height:84px;display:flex;align-items:center;gap:clamp(16px,2.4vw,40px);padding-inline:clamp(16px,5.5vw,104px);transition:height .35s var(--ease)}
-.mbar.scrolled .mbar-in{height:66px}
-.mbrand{display:flex;align-items:center;gap:12px;flex:none}
-.mbrand svg{width:60px;height:50px;transition:width .35s var(--ease),height .35s var(--ease)}
-.mbar.scrolled .mbrand svg{width:48px;height:40px}
-.mbrand b{display:block;font-family:var(--display);font-weight:700;font-size:2rem;line-height:.78;color:var(--ink);letter-spacing:.03em}
-.mbrand small{display:block;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.24em;font-size:.66rem;color:var(--soft);margin-top:5px}
+.mbar-in{height:108px;display:flex;align-items:center;gap:clamp(16px,2.4vw,40px);padding-inline:clamp(16px,5.5vw,104px);transition:height .35s var(--ease)}
+.mbar.scrolled .mbar-in{height:84px}
+.mbrand{display:flex;align-items:center;gap:16px;flex:none}
+.bname{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:1.7rem;line-height:.86;letter-spacing:.04em;color:#fff;transition:font-size .35s var(--ease)}
+.mbar.scrolled .bname{font-size:1.45rem}
+.mbrand img{height:80px;width:auto;transition:height .35s var(--ease)}
+.mbar.scrolled .mbrand img{height:62px}
+.mbrand b{display:block;font-family:var(--display);font-weight:700;font-size:2rem;line-height:.78;color:#fff;letter-spacing:.03em}
+.mbrand small{display:block;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.24em;font-size:.7rem;color:#A7A7AC;margin-top:5px}
 .mnav{display:flex;gap:2px;margin-left:auto}
-.mnav a{position:relative;padding:12px 12px;font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.09em;font-size:.92rem;color:var(--soft);transition:color .2s}
+.mnav a{position:relative;padding:12px 12px;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:1.02rem;color:#A7A7AC;transition:color .2s}
 .mnav a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
-.mnav a:hover,.mnav a.on{color:var(--ink)}
+.mnav a:hover,.mnav a.on{color:#fff}
 .mnav a:hover::after,.mnav a.on::after{transform:scaleX(1)}
 .mright{display:flex;align-items:center;gap:20px;flex:none}
-.mphone{display:flex;align-items:center;gap:10px;color:var(--ink)}
+.mphone{display:flex;align-items:center;gap:10px;color:#fff}
 .mphone svg{width:22px;height:22px;fill:none;stroke:var(--red);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.mphone span{font-family:var(--cond);font-weight:700;font-size:1.05rem;letter-spacing:.03em;line-height:1.05}
-.mphone small{display:block;font-weight:600;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
-.mcta{display:flex;align-items:center;gap:10px;height:50px;padding:0 26px 0 22px;background:var(--red);color:#fff;font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:1rem;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);transition:background .2s, transform .2s var(--ease)}
+.mphone span{font-family:var(--cond);font-weight:600;font-size:1.15rem;letter-spacing:.03em;line-height:1.05}
+.mphone small{display:block;font-weight:600;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#A7A7AC}
+.mcta{display:flex;align-items:center;gap:10px;height:50px;padding:0 26px 0 22px;background:var(--red);color:#fff;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:1rem;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);transition:background .2s, transform .2s var(--ease)}
 .mcta svg{width:20px;height:20px}
 .mcta:hover{background:#E0222A}
 .mcta:active{transform:scale(.97)}
-.mburger{display:none;width:48px;height:48px;align-items:center;justify-content:center;background:var(--ink)}
+.mburger{display:none;width:48px;height:48px;align-items:center;justify-content:center;background:var(--dark-3)}
 .mburger span,.mburger span::before,.mburger span::after{display:block;width:20px;height:2px;background:#fff;position:relative;transition:transform .3s var(--ease), background .2s}
 .mburger span::before,.mburger span::after{content:"";position:absolute;left:0}
 .mburger span::before{top:-6px}.mburger span::after{top:6px}
@@ -399,7 +390,7 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
   .mnav{display:none}
   .mburger{display:flex}
   .mright{margin-left:auto}
-  .mmenu{position:fixed;left:0;right:0;top:66px;bottom:0;background:var(--dark);padding:24px clamp(16px,5.5vw,104px) 40px;flex-direction:column;overflow-y:auto}
+  .mmenu{position:fixed;left:0;right:0;top:80px;bottom:0;background:var(--dark);padding:24px clamp(16px,5.5vw,104px) 40px;flex-direction:column;overflow-y:auto}
   .menu-open .mmenu{display:flex}
   .mmenu a{display:block;padding:14px 0;color:#fff;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(1.8rem,1.2rem + 2.4vw,2.8rem);line-height:.9;box-shadow:0 1px 0 rgba(255,255,255,.08)}
   .mmenu small{display:block;font-family:var(--cond);font-size:.8rem;letter-spacing:.16em;color:var(--red);margin-bottom:6px}
@@ -407,22 +398,24 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
 @media (max-width:640px){
   .mphone{display:none}
   .mbrand small{display:none}
-  .mbar-in{height:66px}
+  .mbar-in,.mbar.scrolled .mbar-in{height:80px}
+  .mbrand img,.mbar.scrolled .mbrand img{height:58px}
+  .bname,.mbar.scrolled .bname{font-size:1.35rem}
   .mcta{padding:0 18px 0 16px;height:46px}
 }
 
 /* ---------- hero, fuller ---------- */
-.hero{min-height:calc(100svh - 84px)}
+.hero{min-height:calc(100svh - 108px)}
 .hero-photo{width:64%}
-.hero-kicker{display:flex;align-items:center;gap:12px;font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.2em;font-size:.9rem;color:var(--soft);margin-bottom:26px}
+.hero-kicker{display:flex;align-items:center;gap:12px;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.9rem;color:var(--soft);margin-bottom:26px}
 .hero-kicker span{width:34px;height:3px;background:var(--red)}
 .hero-actions{display:flex;align-items:center;gap:30px;flex-wrap:wrap;margin-top:40px}
 .hero .hero-actions .btn{margin-top:0;min-height:56px;font-size:1.1rem}
 .hero-proof{display:flex;gap:clamp(20px,3vw,48px);flex-wrap:wrap;margin-top:clamp(40px,6vh,72px)}
 .hero-proof li{padding-left:14px;box-shadow:inset 3px 0 0 var(--red)}
 .hero-proof b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,1.4rem + 1vw,2.4rem);line-height:.9;color:var(--ink);letter-spacing:.02em}
-.hero-proof span{display:block;margin-top:6px;font-size:.88rem;line-height:1.3;color:var(--soft)}
-.hero-scroll{position:absolute;left:clamp(16px,5.5vw,104px);bottom:26px;z-index:2;display:flex;align-items:center;gap:12px;font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--soft)}
+.hero-proof span{display:block;margin-top:6px;font-size:.95rem;line-height:1.3;color:var(--soft)}
+.hero-scroll{position:absolute;left:clamp(16px,5.5vw,104px);bottom:26px;z-index:2;display:flex;align-items:center;gap:12px;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--soft)}
 .hero-scroll i{position:relative;width:22px;height:34px;border-radius:12px;box-shadow:inset 0 0 0 2px #BDBDC1}
 .hero-scroll i::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:7px;margin-left:-2px;border-radius:2px;background:var(--red);animation:wheel 1.8s ease-in-out infinite}
 @keyframes wheel{0%{transform:translateY(0);opacity:1}70%{transform:translateY(10px);opacity:0}100%{opacity:0}}
@@ -441,7 +434,6 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
 /* ---------- responsive ---------- */
 @media (max-width:1100px){
   .top nav,.top .phone{display:none}
-  .offers .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media (max-width:820px){
   .top{height:58px}
@@ -464,14 +456,94 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
   .perks::before{width:60%;opacity:.6}
   .perk-row{grid-template-columns:1fr}
   .proof .wrap,.contact .wrap{grid-template-columns:1fr}
-  form{grid-template-columns:1fr}
+  .c-info div{grid-template-columns:1fr;gap:2px}
   footer .wrap{grid-template-columns:1fr}
   footer nav{justify-content:start;grid-template-columns:repeat(2,auto)}
   footer address{text-align:left}
   .facts3{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 }
 @media (max-width:520px){
-  .offers .wrap{grid-template-columns:1fr 1fr}
+}
+/* hero offer chips */
+.hero-offers{display:flex;flex-wrap:wrap;gap:6px;margin-top:26px}
+.hero-offers a{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:1rem;padding:11px 18px;background:var(--dark-3);color:#fff;transition:background .2s}
+.hero-offers a:hover{background:var(--red)}
+
+/* offers */
+.offers{background:#fff;border-top:1px solid #E4E4E6}
+.offers .wrap{padding-block:clamp(72px,8vw,128px)}
+.offers-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(24px,5vw,80px);align-items:end}
+.offers-head .redline{max-width:36ch;margin-top:0}
+.offer-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:clamp(40px,5vw,64px)}
+.offer-tabs button{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:18px 22px;background:var(--dark-3);color:#C9C9CC;text-align:left;transition:background .2s,color .2s}
+.offer-tabs b{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:clamp(1.05rem,1rem + .3vw,1.3rem);color:#fff}
+.offer-tabs small{font-size:.95rem}
+.offer-tabs button:hover{background:#3A3A3F}
+.offer-tabs button[aria-selected="true"]{background:var(--red);color:#fff}
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);background:var(--silver);margin-top:6px}
+.offer[hidden]{display:none}
+.offer figure{position:relative;min-height:420px}
+.offer figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.offer-body{padding:clamp(28px,4vw,56px)}
+.offer h3{font-size:clamp(2.2rem,1.4rem + 2.2vw,3.6rem);line-height:.9}
+.offer h3 span{display:block}
+.offer h3 .lt{font-weight:300}
+.offer-lede{margin-top:18px;font-size:var(--sub);line-height:1.45;max-width:38ch}
+.offer-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px}
+.offer-cols .label{color:var(--ink);padding-bottom:10px;border-bottom:2px solid var(--red)}
+.offer-cols ul{margin-top:12px;display:grid;gap:10px}
+.offer-cols li{position:relative;padding-left:24px;line-height:1.4}
+.ticks li::before{content:"";position:absolute;left:0;top:.3em;width:14px;height:8px;border-left:3px solid var(--red);border-bottom:3px solid var(--red);transform:rotate(-45deg)}
+.dots li::before{content:"";position:absolute;left:2px;top:.42em;width:8px;height:12px;background:var(--red);clip-path:polygon(0 0,100% 50%,0 100%)}
+.offer-cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;margin-top:34px}
+@media (max-width:980px){
+  .offers-head{grid-template-columns:1fr}
+  .offer{grid-template-columns:1fr}
+  .offer figure{min-height:240px}
+}
+@media (max-width:600px){
+  .offer-tabs{grid-template-columns:1fr}
+  .offer-tabs button{flex-direction:row;align-items:baseline;justify-content:space-between;padding:14px 18px}
+  .offer-cols{grid-template-columns:1fr}
+}
+/* instagram feed */
+.insta{background:#fff}
+.insta .wrap{padding-block:clamp(72px,8vw,128px)}
+.ig-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(24px,5vw,80px);align-items:end}
+.ig-head .redline{margin-top:0;max-width:36ch}
+.ig-btn{margin-top:24px}
+.ig-btn svg{width:20px;height:20px}
+.ig-feed{margin-top:clamp(36px,4vw,56px)}
+.ig-empty{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.ig-empty span{aspect-ratio:1;background:linear-gradient(180deg,#F1F1F2,#E6E6E8)}
+@media (max-width:980px){.ig-head{grid-template-columns:1fr}.ig-empty{grid-template-columns:1fr 1fr}}
+/* reviews carousel */
+.rv{background:var(--dark);color:#C9C9CC;position:relative;overflow:hidden;isolation:isolate}
+.rv::before{content:"";position:absolute;inset:0;z-index:-1;background:url("assets/img/motor-interno.jpg") center 45%/cover no-repeat;filter:grayscale(1) contrast(1.15);opacity:.14}
+.rv::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(24,24,26,.85) 0%,rgba(24,24,26,.35) 60%,rgba(24,24,26,.6) 100%)}
+.rv .wrap{padding-block:clamp(44px,5vw,72px);display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(32px,6vw,110px);align-items:center}
+.rv-score{padding-right:clamp(24px,4vw,64px);box-shadow:inset -1px 0 0 rgba(255,255,255,.12)}
+.rv-big{display:flex;align-items:baseline;gap:14px;font-family:var(--display);font-weight:700;font-size:clamp(3.6rem,2.6rem + 3vw,5.6rem);line-height:.8;color:#fff}
+.rv-stars{font-family:var(--sans);font-size:1.3rem;letter-spacing:3px;color:#F5B50A}
+.rv-total{font-family:var(--sans);font-weight:500;text-transform:none;font-size:1.05rem;letter-spacing:0;line-height:1.3;color:#C9C9CC;margin-top:14px}
+.rv-score .more{margin-top:14px;color:#fff}
+.rv-stage{min-width:0}
+.rv-slides{display:grid}
+.rv-stage:focus-visible{outline-offset:8px}
+.rv-slide{grid-area:1/1;align-self:center;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s ease,transform .3s ease,visibility 0s .3s}
+.rv-slide.on{opacity:1;visibility:visible;transform:none;transition:opacity .6s var(--ease) .35s,transform .6s var(--ease) .35s}
+.rv-slide:not(.on){transform:translateY(-8px)}
+.rv-slide.on{animation:rvIn .6s var(--ease) .35s both}
+@keyframes rvIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.rv-slide .st{color:#F5B50A;letter-spacing:3px;font-size:1.05rem}
+.rv-slide blockquote{margin-top:14px;font-size:clamp(1.3rem,1rem + 1vw,2rem);line-height:1.4;color:#fff}
+.rv-sum{margin-top:14px;font-size:clamp(1.3rem,1rem + 1vw,2rem);line-height:1.4;color:#E2E2E5}
+.rv-slide figcaption{margin-top:16px;font-size:1rem;color:#A7A7AC}
+.rv-slide figcaption b{color:#fff;font-weight:600}
+.rv-empty{font-size:clamp(1.3rem,1rem + 1vw,2rem);line-height:1.4;color:#fff}
+@media (max-width:820px){
+  .rv .wrap{grid-template-columns:1fr}
+  .rv-score{padding-right:0;box-shadow:none;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
@@ -484,11 +556,6 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="logo" viewBox="0 0 240 200">
-      <polygon points="10,8 230,8 120,192" fill="#D71920"/>
-      <g font-family="Montserrat, Arial, sans-serif" fill="#fff" text-anchor="middle" font-weight="500"><text x="84" y="114" font-size="88">R</text><text x="120" y="70" font-size="30">&amp;</text><text x="156" y="114" font-size="88">R</text></g>
-      <text x="120" y="138" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="14" fill="#fff" letter-spacing="2.2">CENTRO AUTOMOTIVO</text>
-    </symbol>
     <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01Zm-7.01 15.24a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.22-8.23 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
   </defs>
 </svg>
@@ -496,7 +563,7 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
 <!-- STICKY SUB-NAV: one tab per part of the car -->
 <header class="mbar" id="bar">
   <div class="mbar-in">
-    <a href="#topo" class="mbrand" aria-label="R&amp;R Centro Automotivo, início"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>R&amp;R</b><small>Centro Automotivo</small></span></a>
+    <a href="#topo" class="mbrand" aria-label="R&amp;R Centro Automotivo, início"><img src="assets/logo/simbolo-rr-600.webp" alt="" width="600" height="483"><span class="bname">Centro<br>Automotivo</span></a>
     <nav class="mnav" id="tabsNav" aria-label="Partes do carro">
       <a href="#motor">Motor</a>
       <a href="#protocolo">Cabine</a>
@@ -532,7 +599,10 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
       <div class="hero-copy" id="heroCopy">
         <p class="hero-kicker"><span aria-hidden="true"></span>Armação · Sul da Ilha · Florianópolis</p>
         <h1 id="h1">Sua mecânica<br><span class="lt">de confiança.</span></h1>
-        <p class="redline">Mais de 20 anos de experiência em mecânica.</p>
+        <p class="redline">Diagnóstico, revisão preventiva e checklist completo, com mais de 20 anos de experiência.</p>
+        <nav class="hero-offers" aria-label="Nossos serviços">
+          <a href="#diagnostico" data-offer="0">Diagnóstico</a><a href="#preventiva" data-offer="1">Preventiva</a><a href="#checklist" data-offer="2">Checklist</a>
+        </nav>
         <div class="hero-actions">
           <a class="btn" href="https://wa.me/5548988394046?text=Ol%C3%A1%2C%20R%26R!%20Quero%20agendar%20a%20manuten%C3%A7%C3%A3o%20do%20meu%20carro." target="_blank" rel="noopener"><span><svg aria-hidden="true"><use href="#wa"/></svg>Agendar revisão</span><i></i></a>
           <a class="more" href="#protocolo">Conheça o protocolo</a>
@@ -544,9 +614,72 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
         </ul>
       </div>
     </div>
-    <a class="hero-scroll" href="#motor"><i aria-hidden="true"></i>Role para ver cada parte do carro</a>
+    <a class="hero-scroll" href="#avaliacoes-google"><i aria-hidden="true"></i>Role para ver cada parte do carro</a>
   </section>
 
+  <!-- REVIEWS CAROUSEL: one Google review at a time, right after the hero -->
+  <section class="rv" id="avaliacoes-google" aria-labelledby="t-rv">
+    <div class="wrap">
+      <div class="rv-score">
+        <p class="rv-big"><span id="rvNota">5,0</span><span class="rv-stars" aria-hidden="true">★★★★★</span></p>
+        <h2 id="t-rv" class="rv-total"><span id="rvTotal">421</span> avaliações no Google</h2>
+        <a class="more" href="https://www.google.com/maps/search/?api=1&amp;query=R%26R+Centro+Automotivo+Arma%C3%A7%C3%A3o+Florian%C3%B3polis" target="_blank" rel="noopener">Ler no Google</a>
+      </div>
+      <div class="rv-stage" tabindex="0" aria-roledescription="carrossel" aria-label="Avaliações de clientes. Passa sozinho; pausa com o mouse ou o foco aqui.">
+        <div class="rv-slides" id="rvSlides" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERS: the three services, right after the hero -->
+  <section class="offers" id="servicos" aria-labelledby="t-servicos">
+    <div class="wrap">
+      <div class="offers-head">
+        <div>
+          <p class="kicker">Serviços</p>
+          <h2 id="t-servicos">Três cuidados<br><span class="lt">com o seu carro.</span></h2>
+        </div>
+        <p class="redline">Escolha por onde começar. Todo carro passa pelo mesmo protocolo R&amp;R, do diagnóstico à entrega.</p>
+      </div>
+      <div class="offer-tabs" role="tablist" aria-label="Serviços"><button role="tab" id="tab-diagnostico" aria-controls="diagnostico" aria-selected="true"><b>Diagnóstico</b><small>Achar a causa</small></button><button role="tab" id="tab-preventiva" aria-controls="preventiva" aria-selected="false" tabindex="-1"><b>Preventiva</b><small>Antes de dar problema</small></button><button role="tab" id="tab-checklist" aria-controls="checklist" aria-selected="false" tabindex="-1"><b>Checklist</b><small>Cada item conferido</small></button></div>
+      <article class="offer" id="diagnostico" role="tabpanel" aria-labelledby="tab-diagnostico">
+        <figure><img src="assets/img/painel-digital.jpg" alt="Painel de instrumentos digital com luzes de alerta acesas" loading="lazy" width="2000" height="1333" style="object-position:45% 50%"></figure>
+        <div class="offer-body">
+          <h3><span>Diagnóstico</span> <span class="lt">antes de trocar peça.</span></h3>
+          <p class="offer-lede">Luz acesa, barulho estranho ou carro diferente? Primeiro a gente descobre a causa. Só depois fala em peça.</p>
+          <div class="offer-cols">
+            <div><p class="label">O que inclui</p><ul class="ticks"><li>Leitura da central eletrônica com scanner</li><li>Teste dos sistemas ligados ao sintoma</li><li>Relato do que foi encontrado, com fotos</li><li>Orçamento claro antes de qualquer serviço</li></ul></div>
+            <div><p class="label">Quando fazer</p><ul class="dots"><li>Acendeu uma luz no painel</li><li>Ruído, vibração ou cheiro diferente</li><li>O carro perdeu força ou gasta mais</li><li>Outra oficina trocou peça e o problema voltou</li></ul></div>
+          </div>
+          <div class="offer-cta"><a class="btn" href="https://wa.me/5548988394046?text=Ol%C3%A1%2C%20R%26R%21%20Quero%20agendar%20um%20diagn%C3%B3stico%20do%20meu%20carro." target="_blank" rel="noopener"><span><svg aria-hidden="true"><use href="#wa"/></svg>Agendar diagnóstico</span><i></i></a><a class="more" href="dicas/luz-acesa-no-painel/">Luz acesa no painel? Veja o que cada uma significa</a></div>
+        </div>
+      </article>
+      <article class="offer" id="preventiva" role="tabpanel" aria-labelledby="tab-preventiva" hidden>
+        <figure><img src="assets/img/motor-detalhe.jpg" alt="Detalhe do motor de um carro" loading="lazy" width="1400" height="2100" style="object-position:50% 50%"></figure>
+        <div class="offer-body">
+          <h3><span>Revisão preventiva</span> <span class="lt">antes do problema.</span></h3>
+          <p class="offer-lede">É na revisão que aparece o que ainda não deu sinal, e é ali que o reparo sai mais barato.</p>
+          <div class="offer-cols">
+            <div><p class="label">O que inclui</p><ul class="ticks"><li>Troca de óleo e filtros conforme a montadora</li><li>Freios, suspensão e direção</li><li>Arrefecimento, correias e mangueiras</li><li>Bateria, luzes e parte elétrica</li></ul></div>
+            <div><p class="label">Quando fazer</p><ul class="dots"><li>No prazo ou na quilometragem do manual</li><li>Antes de pegar estrada nas férias</li><li>Ao comprar um carro usado</li><li>Se o carro passou muito tempo parado</li></ul></div>
+          </div>
+          <div class="offer-cta"><a class="btn" href="https://wa.me/5548988394046?text=Ol%C3%A1%2C%20R%26R%21%20Quero%20agendar%20uma%20revis%C3%A3o%20preventiva%20do%20meu%20carro." target="_blank" rel="noopener"><span><svg aria-hidden="true"><use href="#wa"/></svg>Agendar revisão</span><i></i></a></div>
+        </div>
+      </article>
+      <article class="offer" id="checklist" role="tabpanel" aria-labelledby="tab-checklist" hidden>
+        <figure><img src="assets/img/suv-farois.jpg" alt="Faróis dianteiros de um SUV" loading="lazy" width="2000" height="1125" style="object-position:50% 50%"></figure>
+        <div class="offer-body">
+          <h3><span>Checklist completo</span> <span class="lt">em todo carro.</span></h3>
+          <p class="offer-lede">Cada item conferido evita erro, retrabalho e prejuízo lá na frente. É o que separa um serviço básico de um profissional.</p>
+          <div class="offer-cols">
+            <div><p class="label">O que inclui</p><ul class="ticks"><li>Vistoria com fotos na entrada</li><li>Níveis de fluidos e vazamentos</li><li>Pneus, freios e iluminação</li><li>Conferência final antes da entrega</li></ul></div>
+            <div><p class="label">Quando fazer</p><ul class="dots"><li>Em toda entrada na oficina</li><li>Antes de uma viagem longa</li><li>Na compra ou venda de um carro</li><li>Quando quer saber como o carro está</li></ul></div>
+          </div>
+          <div class="offer-cta"><a class="btn" href="https://wa.me/5548988394046?text=Ol%C3%A1%2C%20R%26R%21%20Quero%20fazer%20um%20checklist%20completo%20do%20meu%20carro." target="_blank" rel="noopener"><span><svg aria-hidden="true"><use href="#wa"/></svg>Agendar checklist</span><i></i></a></div>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <!-- MOTOR -->
   <section class="feature g-dark dark" id="motor" aria-labelledby="t-motor">
@@ -657,9 +790,9 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
           <p class="redline">Do hatch ao SUV, nacionais e importados, em boas mãos.</p>
         </div>
         <div class="case-tabs" role="tablist" aria-label="Casos da oficina">
-          <button role="tab" aria-selected="true" aria-controls="case">Diagnóstico</button>
-          <button role="tab" aria-selected="false" aria-controls="case">Preventiva</button>
-          <button role="tab" aria-selected="false" aria-controls="case">Checklist</button>
+          <button role="tab" aria-selected="true" aria-controls="case">Mercedes A250</button>
+          <button role="tab" aria-selected="false" aria-controls="case">Land Rover</button>
+          <button role="tab" aria-selected="false" aria-controls="case">Volvo</button>
         </div>
         <div class="case" id="case" role="tabpanel" aria-live="polite">
           <p class="who">Manutenção · Ronaldo e o técnico Sebastian</p>
@@ -708,53 +841,57 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
     </div>
   </section>
 
-  <!-- 9 · CONTACT -->
-  <section class="contact g-light" id="contato" aria-labelledby="t-contato">
+  <!-- INSTAGRAM: automatic feed from a third-party widget -->
+  <section class="insta" id="instagram" aria-labelledby="t-insta">
     <div class="wrap">
-      <div>
+      <div class="ig-head">
+        <div>
+          <p class="kicker">Instagram</p>
+          <h2 id="t-insta">Bastidores<br><span class="lt">da oficina.</span></h2>
+        </div>
+        <div>
+          <p class="redline">Casos, novidades e dicas que a equipe publica no @r_rcentroautomotivo, atualizados aqui automaticamente.</p>
+          <a class="btn ig-btn" href="https://www.instagram.com/r_rcentroautomotivo/" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"/></svg>Seguir no Instagram</span><i></i></a>
+        </div>
+      </div>
+      <!-- FEED AUTOMÁTICO: cole aqui dentro o código do widget (Elfsight, Juicer, Curator, Behold...).
+           Ao colar, apague o bloco .ig-empty. -->
+      <div class="ig-feed" id="instagramFeed">
+        <div class="ig-empty" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · CONTACT -->
+  <section class="contact" id="contato" aria-labelledby="t-contato">
+    <div class="wrap">
+      <div class="c-intro">
         <p class="kicker">Agendamento</p>
         <h2 id="t-contato">Dê a<br><span class="lt">partida.</span></h2>
-        <p class="redline">Agende sua revisão: preencha e a mensagem segue pronta para o WhatsApp da nossa equipe.</p>
-        <form id="booking" action="https://wa.me/5548988394046" method="get" target="_blank">
-          <div class="field"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="name" required></div>
-          <div class="field"><label for="f-carro">Carro e ano</label><input id="f-carro" name="carro" placeholder="Ex.: Mercedes A250 2020" required></div>
-          <div class="field sel"><label for="f-serv">Serviço</label>
-            <select id="f-serv" name="servico">
-              <option>Revisão preventiva</option>
-              <option>Diagnóstico de luz no painel</option>
-              <option>Freios</option>
-              <option>Câmbio automático</option>
-              <option>Alinhamento 3D</option>
-              <option>Auto elétrica e bateria</option>
-              <option>Outro serviço</option>
-            </select></div>
-          <div class="field sel"><label for="f-leva">Como prefere trazer o carro</label>
-            <select id="f-leva" name="leva">
-              <option>Eu levo o carro até a R&amp;R</option>
-              <option>Quero o Leva &amp; Traz</option>
-            </select></div>
-          <div class="field full"><label for="f-dia">Melhor dia e horário</label><input id="f-dia" name="dia"></div>
-          <button class="btn" type="submit"><span><svg aria-hidden="true"><use href="#wa"/></svg>Enviar pelo WhatsApp</span><i></i></button>
-        </form>
-      </div>
-      <aside class="visit dark" aria-labelledby="t-visit">
-        <figure><img src="assets/img/compass-rodovia.jpg" alt="Jeep Compass branco numa rodovia" loading="lazy" width="1600" height="2000" style="object-position:50% 72%"></figure>
-        <div class="in">
-          <h3 id="t-visit">Onde estamos</h3>
-          <dl>
-            <div><dt class="label">Endereço</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Rod.+Francisco+Thomas+dos+Santos+4615+Arma%C3%A7%C3%A3o+Florian%C3%B3polis" target="_blank" rel="noopener">Rod. Francisco Thomas dos Santos, SC-406, 4615, Loja 3 · Armação do Pântano do Sul, Florianópolis/SC</a></dd></div>
-            <div><dt class="label">WhatsApp e telefone</dt><dd><a href="https://wa.me/5548988394046" target="_blank" rel="noopener">(48) 98839-4046</a></dd></div>
-            <div><dt class="label">Instagram</dt><dd><a href="https://www.instagram.com/r_rcentroautomotivo/" target="_blank" rel="noopener">@r_rcentroautomotivo</a></dd></div>
-          </dl>
+        <p class="c-lede">Chame no WhatsApp ou ligue. A equipe responde e já marca o seu horário.</p>
+        <div class="c-actions">
+          <a class="btn" href="https://wa.me/5548988394046?text=Ol%C3%A1%2C%20R%26R!%20Quero%20agendar%20a%20manuten%C3%A7%C3%A3o%20do%20meu%20carro." target="_blank" rel="noopener"><span><svg aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</span><i></i></a>
+          <a class="btn grey" href="tel:+5548988394046"><span>Ligar (48) 98839-4046</span><i></i></a>
         </div>
-      </aside>
+        <dl class="c-info">
+          <div><dt>Endereço</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Rod.+Francisco+Thomas+dos+Santos+4615+Arma%C3%A7%C3%A3o+Florian%C3%B3polis" target="_blank" rel="noopener">SC-406, 4615, Loja 3<br>Armação do Pântano do Sul, Florianópolis/SC</a></dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5548988394046" target="_blank" rel="noopener">(48) 98839-4046</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/r_rcentroautomotivo/" target="_blank" rel="noopener">@r_rcentroautomotivo</a></dd></div>
+        </dl>
+      </div>
+      <div class="c-side">
+      <figure class="c-map">
+        <iframe src="https://www.google.com/maps?q=R%26R%20Centro%20Automotivo%2C%20Rod.%20Francisco%20Thomas%20dos%20Santos%2C%204615%2C%20Arma%C3%A7%C3%A3o%20do%20P%C3%A2ntano%20do%20Sul%2C%20Florian%C3%B3polis%20-%20SC&amp;z=16&amp;hl=pt-BR&amp;output=embed" title="Mapa: R&amp;R Centro Automotivo, na SC-406, Armação do Pântano do Sul, Florianópolis" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <figcaption><a class="more" href="https://www.google.com/maps/dir/?api=1&amp;destination=R%26R%20Centro%20Automotivo%2C%20Rod.%20Francisco%20Thomas%20dos%20Santos%2C%204615%2C%20Arma%C3%A7%C3%A3o%20do%20P%C3%A2ntano%20do%20Sul%2C%20Florian%C3%B3polis%20-%20SC" target="_blank" rel="noopener">Como chegar</a></figcaption>
+      </figure>
+      </div>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <a href="#topo" class="brand" aria-label="Voltar ao topo"><svg aria-hidden="true"><use href="#logo"/></svg></a>
+    <a href="#topo" class="brand" aria-label="R&amp;R Centro Automotivo, voltar ao topo"><img src="assets/logo/logo-rr-600.webp" alt="R&amp;R Centro Automotivo" width="600" height="483" loading="lazy"></a>
     <nav aria-label="Rodapé">
       <a href="#motor">Motor</a><a href="#protocolo">Cabine</a><a href="#freios">Freios</a>
       <a href="#pneus">Pneus</a><a href="#oleo">Óleo</a><a href="#equipe">Equipe</a><a href="#contato">Contato</a><a href="dicas/">Dicas</a>
@@ -769,6 +906,7 @@ footer address{font-style:normal;max-width:30ch;text-align:right}
 
 <a class="wa-float" href="https://wa.me/5548988394046?text=Ol%C3%A1%2C%20R%26R!%20Quero%20falar%20sobre%20o%20meu%20carro." target="_blank" rel="noopener" aria-label="Falar com a R&amp;R no WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg><b>Fale com a gente</b></a>
 
+<script src="assets/avaliacoes.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
@@ -840,7 +978,7 @@ Scenes.protocolo = (root) => Stage.scene(root, {
       // hero picture drifts as you leave
       gsap.to('#heroPhoto', { yPercent: 6, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
       // section headings: lines rise from their mask
-      document.querySelectorAll('.feature h2, .perks h2, .proof h2, .contact h2').forEach(h => {
+      document.querySelectorAll('.offers h2, .insta h2, .feature h2, .perks h2, .proof h2, .contact h2').forEach(h => {
         const lines = Stage.split(h, 'lines'); h.classList.add('is-split');
         gsap.from(lines, { yPercent: 110, duration: 1.1, ease: 'expo.out', stagger: .08, scrollTrigger: { trigger: h, start: 'top 88%', once: true } });
       });
@@ -861,6 +999,39 @@ Scenes.protocolo = (root) => Stage.scene(root, {
   }));
   const restart = el => { el.classList.remove('swap'); void el.offsetWidth; el.classList.add('swap'); };
 
+  /* reviews carousel */
+  (() => {
+    const R = (window.AVALIACOES || []).filter(r => r && (r.texto || r.resumo) && (r.estrelas || 5) >= 4);
+    const sum = window.AVALIACOES_RESUMO; if (sum) { rvNota.textContent = sum.nota; rvTotal.textContent = sum.total; }
+    const box = document.getElementById('rvSlides');
+    const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    if (!R.length) { box.innerHTML = '<p class="rv-empty">Mais de 400 clientes deram nota máxima à R&amp;R no Google. Leia o que eles dizem.</p>'; return; }
+    box.innerHTML = R.map((r, i) => `<figure class="rv-slide${i ? '' : ' on'}" aria-label="Avaliação ${i + 1} de ${R.length}"><p class="st" aria-label="${r.estrelas || 5} estrelas">${'★'.repeat(r.estrelas || 5)}</p>${r.texto ? `<blockquote>“${esc(r.texto)}”</blockquote>` : `<p class="rv-sum">${esc(r.resumo)}</p>`}<figcaption><b>${esc(r.nome || 'Cliente')}</b>${r.quando ? ' · ' + esc(r.quando) : ''} · Google</figcaption></figure>`).join('');
+    if (R.length < 2) return;
+    const slides = [...box.children]; let cur = 0, timer;
+    const go = i => { cur = (i + R.length) % R.length; slides.forEach((x, k) => x.classList.toggle('on', k === cur)); };
+    const play = () => { clearInterval(timer); if (!reduce) timer = setInterval(() => go(cur + 1), 7000); };
+    const st = document.querySelector('.rv-stage');
+    st.addEventListener('mouseenter', () => clearInterval(timer)); st.addEventListener('mouseleave', play);
+    st.addEventListener('focusin', () => clearInterval(timer)); st.addEventListener('focusout', play);
+    go(0); play();
+  })();
+
+  /* offers */
+  const otabs = [...document.querySelectorAll('.offer-tabs button')], opanels = [...document.querySelectorAll('.offer')];
+  const offer = i => {
+    otabs.forEach((b, k) => { b.setAttribute('aria-selected', k === i); b.tabIndex = k === i ? 0 : -1; });
+    opanels.forEach((p, k) => { p.hidden = k !== i; });
+    restart(opanels[i]);
+  };
+  otabs.forEach((b, i) => b.addEventListener('click', () => offer(i)));
+  arrows(otabs, offer);
+  document.querySelectorAll('[data-offer]').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault(); offer(+a.dataset.offer);
+    document.getElementById('servicos').scrollIntoView({ behavior: 'smooth' });
+  }));
+  const hashI = opanels.findIndex(p => '#' + p.id === location.hash); if (hashI > 0) offer(hashI);
+
   /* cases */
   const cases = [
     { w: 'Manutenção · Ronaldo e o técnico Sebastian', d: 'Diagnóstico com equipamento de alta tecnologia e atenção a cada detalhe. Ronaldo e Sebastian trabalharam juntos para devolver a A250 à rua com a segurança, o desempenho e a confiabilidade que ela merece.' },
@@ -876,15 +1047,6 @@ Scenes.protocolo = (root) => Stage.scene(root, {
   };
   ctabs.forEach((b, i) => { b.tabIndex = i ? -1 : 0; b.addEventListener('click', () => pick(i)); });
   arrows(ctabs, pick);
-
-  /* booking */
-  document.getElementById('booking').addEventListener('submit', e => {
-    e.preventDefault();
-    const f = e.target, v = n => f.elements[n].value.trim();
-    let msg = `Olá, R&R! Sou ${v('nome')}. Quero agendar: ${v('servico')} para o meu ${v('carro')}. ${v('leva')}.`;
-    if (v('dia')) msg += ` Melhor dia e horário: ${v('dia')}.`;
-    window.open(WA + encodeURIComponent(msg), '_blank', 'noopener');
-  });
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
